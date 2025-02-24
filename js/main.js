@@ -27,16 +27,17 @@ $(document).ready(function () {
   // Affiche les offres au chargement de la page
   afficherOffres(offres);
 
-  // Gestion de la recherche d'offres
+   // Gestion de la recherche d'offres
   $('#search-input').on('input', function () {
-    const searchTerm = $(this).val().toLowerCase();
+    const searchTerm = $(this).val().toLowerCase(); // Récupère le terme de recherche
     const filteredOffres = offres.filter(offre =>
       offre.titre.toLowerCase().includes(searchTerm) ||
       offre.description.toLowerCase().includes(searchTerm) ||
       offre.entreprise.toLowerCase().includes(searchTerm)
     );
-    afficherOffres(filteredOffres);
+    afficherOffres(filteredOffres); // Affiche les offres filtrées
   });
+
 
   // Gestion du formulaire d'ajout d'offre
   $('#offre-form').submit(function (e) {
