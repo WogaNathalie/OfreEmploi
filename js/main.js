@@ -15,7 +15,7 @@ $(document).ready(function () {
               <p class="card-text"><strong>Entreprise :</strong> ${offre.entreprise}</p>
               <p class="card-text">${offre.description}</p>
               <p class="card-text"><strong>Contact :</strong> ${offre.contact}</p>
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#candidatureModal" onclick="setOffreIndex(${index})">Postuler</button>
+              <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#candidatureModal" onclick="setOffreIndex(${index})">Postuler</button>
               <button class="btn btn-danger" onclick="supprimerOffre(${index})">Supprimer</button>
             </div>
           </div>
